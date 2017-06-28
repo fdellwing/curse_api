@@ -1,0 +1,7 @@
+# You may have to edit this part to fit you server settings
+RewriteEngine On
+RewriteRule (.*)\-(total|monthly)\.svg /curse_api/$2_downloads.php?addon=$1 [NC,L]
+
+# Don't touch this!
+Header set Cache-Control no-cache
+Header merge X-Powered-By shields.io
